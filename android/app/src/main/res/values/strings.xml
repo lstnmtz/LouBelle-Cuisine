@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">LouBelle Cuisine</string>
+    <string name="title_activity_main">LouBelle Cuisine</string>
+    <string name="package_name">com.LouBelleCuisine.app</string>
+    <string name="custom_url_scheme">com.LouBelleCuisine.app</string>
+</resources>
