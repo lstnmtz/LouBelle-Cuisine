@@ -1,0 +1,27 @@
+{
+  "id": "1",
+  "titre": "Omelette aux fines herbes",
+  "image": "/placeholder.svg",
+  "nombrePersonnes": 2,
+  "categorie": "Petit-déjeuner",
+  "caloriesParPersonne": 250,
+  "macronutrimentsParPersonne": {
+    "proteines": 15,
+    "lipides": 20,
+    "glucides": 1
+  },
+  "tempsPreparation": 5,
+  "tempsCuisson": 5,
+  "ingredients": [
+    { "nom": "Œufs", "quantite": 4, "unite": "pièce", "type": "Produits animaux" },
+    { "nom": "Herbes de Provence", "quantite": 1, "unite": "cuillère à café", "type": "Épices" },
+    { "nom": "Beurre", "quantite": 10, "unite": "g", "type": "Produits laitiers" }
+  ],
+  "instructions": [
+    "Battre les œufs avec les herbes dans un bol.",
+    "Faire chauffer le beurre dans une poêle.",
+    "Verser le mélange et cuire jusqu'à ce que l'omelette soit bien prise."
+  ],
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z"
+}

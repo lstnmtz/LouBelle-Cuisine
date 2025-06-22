@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Plus } from 'lucide-react';
 import { ThemeProvider } from 'next-themes';
@@ -382,6 +381,18 @@ function Index() {
             </p>
           </CardContent>
         </Card>
+
+        {/* Nouveau bouton pour réinitialiser les recettes */}
+        <Button
+          variant="destructive"
+          className="w-full"
+          onClick={() => {
+            localStorage.removeItem('mes-recettes-recipes');
+            window.location.reload();
+          }}
+        >
+          Réinitialiser les recettes par défaut
+        </Button>
       </div>
     </>
   );
@@ -431,9 +442,22 @@ function Index() {
     }
   };
 
+  // Gère l'historique pour le détail recette
+  useEffect(() => {
+    if (selectedRecipe) {
+      window.history.pushState({ recipeId: selectedRecipe.id }, '');
+      const onPopState = () => setSelectedRecipe(null);
+      window.addEventListener('popstate', onPopState);
+      return () => window.removeEventListener('popstate', onPopState);
+    }
+  }, [selectedRecipe]);
+
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <div className="min-h-screen bg-background pb-16">
+      <div
+        className="min-h-screen bg-background pb-16"
+        style={{ paddingTop: 'env(safe-area-inset-top)' }}
+      >
         {renderContent()}
         
         <BottomNavigation activeTab={activeTab} onTabChange={setActiveTab} />

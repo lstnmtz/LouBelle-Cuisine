@@ -1,4 +1,3 @@
-
 import { Recipe, WeeklyPlan, ShoppingList } from '@/types/recipe';
 
 const STORAGE_KEYS = {
@@ -7,6 +6,12 @@ const STORAGE_KEYS = {
   SHOPPING_LISTS: 'mes-recettes-shopping-lists',
   SETTINGS: 'mes-recettes-settings'
 };
+
+const recipesContext = import.meta.glob('../recipes/*.json', { eager: true });
+
+function getAllDefaultRecipes(): Recipe[] {
+  return Object.values(recipesContext).map((mod: any) => mod.default ?? mod) as Recipe[];
+}
 
 export class LocalStorage {
   static async getRecipes(): Promise<Recipe[]> {
@@ -103,51 +108,8 @@ export class LocalStorage {
   static initializeDefaultData(): void {
     const existingRecipes = localStorage.getItem(STORAGE_KEYS.RECIPES);
     if (!existingRecipes) {
-      const defaultRecipes: Recipe[] = [
-        {
-          id: '1',
-          titre: 'Omelette aux fines herbes',
-          image: '/placeholder.svg',
-          nombrePersonnes: 2,
-          categorie: 'Petit-déjeuner',
-          caloriesParPersonne: 250,
-          macronutrimentsParPersonne: {
-            proteines: 15,
-            lipides: 20,
-            glucides: 1
-          },
-          tempsPreparation: 5,
-          tempsCuisson: 5,
-          ingredients: [
-            {
-              nom: 'Œufs',
-              quantite: 4,
-              unite: 'pièce',
-              type: 'Produits animaux'
-            },
-            {
-              nom: 'Herbes de Provence',
-              quantite: 1,
-              unite: 'cuillère à café',
-              type: 'Épices'
-            },
-            {
-              nom: 'Beurre',
-              quantite: 10,
-              unite: 'g',
-              type: 'Produits laitiers'
-            }
-          ],
-          instructions: [
-            'Battre les œufs avec les herbes dans un bol.',
-            'Faire chauffer le beurre dans une poêle.',
-            'Verser le mélange et cuire jusqu\'à ce que l\'omelette soit bien prise.'
-          ],
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString()
-        }
-      ];
-      
+      // Charge toutes les recettes du dossier recipes automatiquement
+      const defaultRecipes: Recipe[] = getAllDefaultRecipes();
       localStorage.setItem(STORAGE_KEYS.RECIPES, JSON.stringify(defaultRecipes));
     }
   }

@@ -1,0 +1,29 @@
+{
+  "id": "2",
+  "titre": "Pancakes moelleux",
+  "image": "/placeholder.svg",
+  "nombrePersonnes": 4,
+  "categorie": "Petit-déjeuner",
+  "caloriesParPersonne": 320,
+  "macronutrimentsParPersonne": {
+    "proteines": 8,
+    "lipides": 10,
+    "glucides": 48
+  },
+  "tempsPreparation": 10,
+  "tempsCuisson": 15,
+  "ingredients": [
+    { "nom": "Farine", "quantite": 250, "unite": "g", "type": "Épicerie" },
+    { "nom": "Lait", "quantite": 300, "unite": "ml", "type": "Produits laitiers" },
+    { "nom": "Œufs", "quantite": 2, "unite": "pièce", "type": "Produits animaux" },
+    { "nom": "Sucre", "quantite": 30, "unite": "g", "type": "Épicerie" },
+    { "nom": "Levure chimique", "quantite": 1, "unite": "sachet", "type": "Épicerie" }
+  ],
+  "instructions": [
+    "Mélanger la farine, le sucre et la levure.",
+    "Ajouter les œufs puis le lait progressivement.",
+    "Cuire des petites louches de pâte dans une poêle chaude."
+  ],
+  "createdAt": "2024-01-02T00:00:00.000Z",
+  "updatedAt": "2024-01-02T00:00:00.000Z"
+}

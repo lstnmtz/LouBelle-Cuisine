@@ -1,0 +1,38 @@
+{
+  "id": "2",
+  "titre": "Cookies",
+  "image": "/cookies.jpg",
+  "nombrePersonnes": 4,
+  "categorie": "Dessert",
+  "caloriesParPersonne": 450,
+  "macronutrimentsParPersonne": {
+    "proteines": 6,
+    "lipides": 22,
+    "glucides": 55
+  },
+  "tempsPreparation": 20,
+  "tempsCuisson": 12,
+  "ingredients": [
+    { "nom": "Beurre froid", "quantite": 100, "unite": "g", "type": "Produits laitiers" },
+    { "nom": "Sucre", "quantite": 50, "unite": "g", "type": "Édulcorants" },
+    { "nom": "Cassonade", "quantite": 50, "unite": "g", "type": "Édulcorants" },
+    { "nom": "Œuf", "quantite": 1, "unite": "pièce", "type": "Produits animaux" },
+    { "nom": "Arôme de vanille", "quantite": 1, "unite": "cuillère à café", "type": "Arômes" },
+    { "nom": "Farine", "quantite": 180, "unite": "g", "type": "Céréales" },
+    { "nom": "Levure chimique", "quantite": 1, "unite": "cuillère à café", "type": "Poudres levantes" },
+    { "nom": "Bicarbonate de soude", "quantite": 0.5, "unite": "cuillère à café", "type": "Poudres levantes" },
+    { "nom": "Sel", "quantite": 1, "unite": "pincée", "type": "Assaisonnements" },
+    { "nom": "Chocolat au lait", "quantite": 100, "unite": "g", "type": "Confiseries" }
+  ],
+  "instructions": [
+    "Mélanger le beurre froid coupé en morceaux avec le sucre et la cassonade.",
+    "Ajouter l'œuf et l’arôme de vanille. Mélanger à la main ou au robot avec la feuille.",
+    "Incorporer la farine, la levure chimique, le bicarbonate de soude et le sel. Mélanger à nouveau.",
+    "Ajouter le chocolat au lait en morceaux.",
+    "Former 4 grosses boules de pâte et les placer au congélateur pendant 30 à 45 minutes.",
+    "Préchauffer le four à 180°C. Cuire les cookies pendant environ 12 minutes.",
+    "Laisser tiédir et déguster. Extérieur croustillant, intérieur fondant garanti !"
+  ],
+  "createdAt": "2025-06-22T00:00:00.000Z",
+  "updatedAt": "2025-06-22T00:00:00.000Z"
+}
